@@ -1,0 +1,7 @@
+{
+  "name": "redis-task-manager-js",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {"start":"node server.js","worker":"node worker.js"},
+  "dependencies": {"express":"^5.1.0","redis":"^4.7.0"}
+}

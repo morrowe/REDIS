@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redis Task Manager</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Redis Task Manager</h1>
+    </header>
+
+    <section class="card">
+      <h2>Новая задача</h2>
+      <form id="taskForm">
+        <input id="title" placeholder="Название задачи" required />
+        <select id="priority"><option value="1">Высокий</option><option value="2" selected>Средний</option><option value="3">Низкий</option></select>
+        <input id="tags" placeholder="Теги через запятую" />
+        <button>Добавить</button>
+      </form>
+    </section>
+
+    <section class="stats" id="stats"></section>
+
+    <section class="card">
+      <div class="row between"><h2>Задачи</h2><button class="secondary" id="refresh">Обновить</button></div>
+      <div id="tasks"></div>
+    </section>
+
+    <section class="card">
+      <div class="row between"><h2>Redis Lab</h2><button class="secondary" id="labRefresh">Показать структуры Redis</button></div>
+      <div id="lab" class="lab"></div>
+    </section>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
